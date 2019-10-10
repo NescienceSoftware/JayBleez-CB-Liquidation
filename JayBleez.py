@@ -28,16 +28,16 @@ while count < 99999:
                 for c in currencies:
                     if c['id'] == symbol:
                         minimum = float(c['base_min_size'])
-                if minimum <= .001:
+                if minimum < .001:
                     sell_asset = truncate(sell_asset, 4)
                 else:
-                    if minimum <= .01:
+                    if minimum < .01:
                         sell_asset = truncate(sell_asset, 3)
                     else:
-                        if minimum <= .1:
+                        if minimum < .1:
                             sell_asset = truncate(sell_asset, 2)
                         else:
-                            if minimum <= 1:
+                            if minimum < 1:
                                 sell_asset = truncate(sell_asset, 1)
                             else:
                                 if minimum == 1:
